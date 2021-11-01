@@ -50,8 +50,7 @@ def repair_image(file_line):
 
 
 # 输入文件路径
-# file_url = input("请输入.md文件所在路径：\n")
-file_url = r"C:\Users\a\Downloads\Python数据分析课件资料"
+file_url = input("请输入.md文件所在路径：\n")
 
 for file_list_i in get_file_list(file_url):
     write_file(file_list_i, repair_image(read_file(file_list_i)))
