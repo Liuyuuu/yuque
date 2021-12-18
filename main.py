@@ -28,7 +28,7 @@ def write_file(file_url, file_line):
     # 写入文件
     # 修改文件名
     filename = os.path.split(file_url)
-    file_url = os.path.join(filename[0],r"new-" + filename[1])
+    file_url = os.path.join(filename[0],r"" + filename[1])
 
     # 写入文件
     with open(file_url, 'w', encoding='utf-8') as file:
@@ -54,6 +54,9 @@ file_url = input("请输入.md文件所在路径：\n")
 
 for file_list_i in get_file_list(file_url):
     write_file(file_list_i, repair_image(read_file(file_list_i)))
+
+
+print("转换结束")
 
 
 
